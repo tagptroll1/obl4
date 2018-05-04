@@ -3,11 +3,17 @@ package mystuff;
 import oblig_filer.Entry;
 import oblig_filer.ISortedTreeMap;
 
+import java.util.Comparator;
 import java.util.NoSuchElementException;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
 
-public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISortedTreeMap{
+public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISortedTreeMap<K, V>{
+
+
+    public SortedTreeMap(Comparator<K> kComparator) {
+
+    }
 
     /**
      * Finds the minimum value in the map, if no value is found, returns null instead.
@@ -38,7 +44,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @return Previous value
      */
     @Override
-    public Object add(Comparable key, Object value) {
+    public V add(K key, V value) {
         return null;
     }
 
@@ -50,7 +56,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @return Previous value
      */
     @Override
-    public Object add(Entry entry) {
+    public V add(Entry<K, V> entry) {
         return null;
     }
 
@@ -63,7 +69,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @throws NoSuchElementException When key is not in map
      */
     @Override
-    public void replace(Comparable key, Object value) throws NoSuchElementException {
+    public void replace(K key, V value) throws NoSuchElementException {
 
     }
 
@@ -76,7 +82,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @throws NoSuchElementException When key is not in map
      */
     @Override
-    public void replace(Comparable key, BiFunction f) throws NoSuchElementException {
+    public void replace(K key, BiFunction<K, V, V> f) throws NoSuchElementException {
 
     }
 
@@ -89,7 +95,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @throws NoSuchElementException When key is not in map.
      */
     @Override
-    public Object remove(Object key) throws NoSuchElementException {
+    public V remove(Object key) throws NoSuchElementException {
         return null;
     }
 
@@ -101,7 +107,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @throws NoSuchElementException When key is not in map
      */
     @Override
-    public Object getValue(Object key) throws NoSuchElementException {
+    public V getValue(Object key) throws NoSuchElementException {
         return null;
     }
 
@@ -112,7 +118,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @return true if the key is in the map, false otherwise
      */
     @Override
-    public boolean containsKey(Comparable key) {
+    public boolean containsKey(K key) {
         return false;
     }
 
@@ -123,7 +129,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @return True if the value is present, false otherwise
      */
     @Override
-    public boolean containsValue(Object value) {
+    public boolean containsValue(V value) {
         return false;
     }
 
@@ -133,7 +139,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @return keys in order
      */
     @Override
-    public Iterable keys() {
+    public Iterable<K> keys() {
         return null;
     }
 
@@ -143,7 +149,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @return values in order of the keys
      */
     @Override
-    public Iterable values() {
+    public Iterable<V> values() {
         return null;
     }
 
@@ -153,7 +159,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @return All entries in order of the keys
      */
     @Override
-    public Iterable<Entry> entries() {
+    public Iterable<Entry<K, V>> entries() {
         return null;
     }
 
@@ -165,7 +171,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @return The entry for the key or the next highest
      */
     @Override
-    public Entry higherOrEqualEntry(Comparable key) {
+    public Entry<K, V> higherOrEqualEntry(K key) {
         return null;
     }
 
@@ -177,7 +183,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @return The entry for the key or the next lower
      */
     @Override
-    public Entry lowerOrEqualEntry(Comparable key) {
+    public Entry<K, V> lowerOrEqualEntry(K key) {
         return null;
     }
 
@@ -188,7 +194,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @param other The map to add to the current map.
      */
     @Override
-    public void merge(ISortedTreeMap other) {
+    public void merge(ISortedTreeMap<K, V> other) {
 
     }
 
@@ -199,7 +205,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      * @param p The predicate that tests which entries should be kept.
      */
     @Override
-    public void removeIf(BiPredicate p) {
+    public void removeIf(BiPredicate<K, V> p) {
 
     }
 
