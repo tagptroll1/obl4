@@ -9,7 +9,36 @@ import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
 
 public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISortedTreeMap<K, V>{
+    private int numberOfEntries;
 
+    private BinaryNode rootNode;
+
+    //------------------------
+
+    private class BinaryNode{
+        private BinaryNode parent, left, right;
+        private Entry data;
+
+        //"rut"
+        BinaryNode(){
+            this(null,null,null,null);
+        }
+
+        BinaryNode(Entry data){
+            this(null,null,null,data);
+        }
+
+        BinaryNode(BinaryNode parent, BinaryNode left, BinaryNode right , Entry data){
+            this.data = data;
+
+            this.parent = parent;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
+
+    //------------------------
 
     public SortedTreeMap(Comparator<K> kComparator) {
 
@@ -216,7 +245,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      */
     @Override
     public boolean isEmpty() {
-        return false;
+        return size() <= 0;
     }
 
     /**
@@ -226,7 +255,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
      */
     @Override
     public int size() {
-        return 0;
+        return numberOfEntries;
     }
 
     /**
