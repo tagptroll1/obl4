@@ -12,10 +12,11 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
     private int numberOfEntries;
     private BinaryNode rootNode;
 
-    private Comparator<K> comp;
+    private Comparator<? super K> comparator;
 
 
-    public SortedTreeMap(Comparator<K> kComparator) {
+    public SortedTreeMap(Comparator<K> comparator) {
+        this.comparator = comparator;
         numberOfEntries = 0;
         rootNode = null;
     }
