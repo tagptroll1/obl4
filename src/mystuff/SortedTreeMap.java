@@ -34,15 +34,40 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
         return null;
     }
 
-    // TODO: 16.05.2018  ...if root == null -> new map/ rootnode... 
+
     @Override
     public V add(K key, V value) {
-        return null;
+        return add(new Entry<>(key, value));
     }
     
     @Override
     public V add(Entry<K, V> entry) {
+        //om Map er "tom"
+        if (isEmpty()){
+            rootNode = new BinaryNode(entry);
+            numberOfEntries++;
+            return entry.value;
+        }
+        //om key er lik
+        if (rootNode.getData().key == entry.key){
+            Entry tmp = rootNode.getData();
+            rootNode.setData(entry);
+            return (V)tmp.value;
+        }
+
+        addy(rootNode, new BinaryNode(entry));
+
         return null;
+    }
+
+    private BinaryNode addy(BinaryNode currRoot, BinaryNode toBeInserted){
+        int comp = comparator.compare((K)currRoot.getData().key, (K)toBeInserted.getData().key);
+
+        if(comp == 0){
+
+        }
+
+        return currRoot;
     }
 
 
@@ -116,7 +141,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
     
     @Override
     public boolean isEmpty() {
-        return size() <= 0;
+        return rootNode == null;
     }
     
     @Override
