@@ -60,48 +60,7 @@ public class BinaryNode{
         return this.right != null;
     }
     public boolean isLeaf(){
-        return (left != null) && (right != null);
-    }
-
-    public Iterator iterator(){
-        return new BinaryPOIterator();
-    }
-
-    private class BinaryPOIterator implements Iterator{
-        private BinaryNode current;
-        private Stack stack;
-
-        public BinaryPOIterator(){
-            current = BinaryNode.this;
-            stack = new Stack();
-        }
-        /**
-         * Returns {@code true} if the iteration has more elements.
-         * (In other words, returns {@code true} if {@link #next} would
-         * return an element rather than throwing an exception.)
-         *
-         * @return {@code true} if the iteration has more elements
-         */
-        @Override
-        public boolean hasNext() {
-            return current != null || !current.isLeaf();
-        }
-
-        /**
-         * Returns the next element in the iteration.
-         *
-         * @return the next element in the iteration
-         * @throws NoSuchElementException if the iteration has no more elements
-         */
-        @Override
-        public BinaryNode next() {
-            BinaryNode result = null;
-
-
-
-            return result;
-        }
-
+        return (left == null) && (right == null);
     }
 
 }
