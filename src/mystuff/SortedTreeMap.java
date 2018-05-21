@@ -118,14 +118,24 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
             "root= "+rootNode+"\n"+ "key= "+key+"\n"+ "node= "+nodeToRemove+"\n");
         }
 
+        if (nodeToRemove.isLeaf()){
+            nodeToRemove = null;
+        }
 
+        // just one child
+        if (nodeToRemove.hasLeft() && !nodeToRemove.hasRight()){
+            nodeToRemove = nodeToRemove.getLeft();
+        } else if (nodeToRemove.hasRight() && !nodeToRemove.hasLeft()){
+            nodeToRemove = nodeToRemove.getRight();
+        }
+
+        //todo "node To Be Removed" has two children
 
         numberOfEntries--;
-        return null;
+        return (V)nodeToRemove.getData().value;
     }
 
 
-    // TODO: 21.05.2018 EEEH....is work?
     @Override
     public V getValue(Object key) throws NoSuchElementException {
         BinaryNode result = getNodeByKey(rootNode, (K)key);
@@ -253,36 +263,34 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
         public TreeIterator(){
             currRoot = rootNode;
             stack = new Stack<>();
-            while (currRoot != null){
-                currRoot = currRoot.getLeft();
-            }
         }
 
         @Override
         public boolean hasNext() {
-            return !stack.isEmpty();
+            return !stack.isEmpty() || (currRoot != null);
         }
 
-         // @throws NoSuchElementException if the iteration has no more elements
+        // @throws NoSuchElementException if the iteration has no more elements
         @Override
         public Entry<K,V> next() {
+            //648,685
 
-            if (stack.isEmpty()){
-                throw new NoSuchElementException("EMPTY stack.");
+            BinaryNode next = null;
+
+            while (currRoot != null){
+                stack.push(currRoot);
+                currRoot = currRoot.getLeft(); //go all waay left..
             }
 
-            BinaryNode n = stack.pop();
-            Entry result = n.getData();
-
-            if (currRoot.hasRight()){
-                currRoot = currRoot.getRight();
-                while (currRoot != null){
-                    stack.push(currRoot);
-                    currRoot = currRoot.getLeft();
-                }
+            if (!stack.isEmpty()){
+                next = stack.pop();
+                assert next != null;
+                currRoot = next.getRight();
+            } else {
+                throw new NoSuchElementException();
             }
 
-            return result;
+            return next.getData();
         }
 
     }

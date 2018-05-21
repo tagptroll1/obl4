@@ -1,8 +1,7 @@
 package mystuff;
 import oblig_filer.Entry;
 
-import java.util.Iterator;
-import java.util.Stack;
+
 
 public class BinaryNode{
 
@@ -51,13 +50,13 @@ public class BinaryNode{
      * @return TRUE if node left child is not null.
      */
     public boolean hasLeft(){
-        return this.left != null;
+        return (this.left != null);
     }
     /**
      * @return TRUE if node right child is not null.
      */
     public boolean hasRight(){
-        return this.right != null;
+        return (this.right != null);
     }
     public boolean isLeaf(){
         return (left == null) && (right == null);
