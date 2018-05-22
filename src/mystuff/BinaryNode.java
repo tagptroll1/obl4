@@ -3,18 +3,18 @@ import oblig_filer.Entry;
 
 
 
-public class BinaryNode{
+public class BinaryNode<K,V>{
 
     private BinaryNode left, right;
 
-    private Entry data;
+    private Entry<K, V> data;
 
 
-    BinaryNode(Entry data){
+    BinaryNode(Entry<K,V> data){
         this(null,null,data);
     }
 
-    BinaryNode(BinaryNode left, BinaryNode right , Entry data){
+    BinaryNode(BinaryNode left, BinaryNode right , Entry<K,V> data){
         this.data = data;
 
         this.left = left;
@@ -42,7 +42,7 @@ public class BinaryNode{
         return data;
     }
 
-    public void setData(Entry data) {
+    public void setData(Entry<K,V> data) {
         this.data = data;
     }
 

@@ -25,13 +25,20 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
 
     @Override
     public Entry<K, V> min() {
+        Iterator itr = getIter();
+        if (itr.hasNext()) return (Entry<K, V>) itr.next();
         return null;
     }
 
 
     @Override
     public Entry<K, V> max() {
-        return null;
+        Entry<K,V> last = null;
+        Iterator itr = getIter();
+        while (itr.hasNext()){
+            last = (Entry<K, V>) itr.next();
+        }
+        return last;
     }
 
 
@@ -60,7 +67,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
     }
 
     private V addElem(Entry<K,V> entry, BinaryNode node){
-        int comparison = comparator.compare(entry.key, (K)node.getData().key);
+        int comparison = comparator.compare( entry.key, (K)node.getData().key);
 
         V result = null;
 
@@ -95,11 +102,10 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
 
     @Override
     public void replace(K key, V value) throws NoSuchElementException {
-        BinaryNode n = getNodeByKey(rootNode, key);
-        if (n == null){
-            throw new NoSuchElementException("Replacing -> could not find key in map");
+        if (containsKey(key)){
+            add(key,value);
         } else {
-            n.setData(new Entry<>(key, value));
+            throw new NoSuchElementException("replace() failed");
         }
     }
     
@@ -217,17 +223,37 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
     
     @Override
     public Entry<K, V> higherOrEqualEntry(K key) {
-        return null;
+        Iterator itr = getIter();
+        Entry<K,V> cur = null;
+        while (itr.hasNext()){
+            cur = (Entry<K, V>) itr.next();
+                // FIXME: Comparator comparison order of param?
+            int comp = comparator.compare(key, cur.key);
+            if (comp >= 0) break;
+        }
+        return cur;
     }
+
     
     @Override
     public Entry<K, V> lowerOrEqualEntry(K key) {
+//        Entry<K, V> cur,prev;
+//        cur = null;
+//        prev = null;
+//        Iterator itr = getIter();
+//        while (itr.hasNext()){
+//            prev = cur;
+//            cur = (Entry<K, V>) itr.next();
+//        }
+//
+//        return cur;
+
         return null;
     }
     
     @Override
     public void merge(ISortedTreeMap<K, V> other) {
-
+        other.entries().forEach(this::add);
     }
     
     @Override
@@ -260,7 +286,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
         private Stack<BinaryNode> stack;
         private BinaryNode currRoot;
 
-        public TreeIterator(){
+        private TreeIterator(){
             currRoot = rootNode;
             stack = new Stack<>();
         }
@@ -289,8 +315,8 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
             } else {
                 throw new NoSuchElementException();
             }
-
-            return next.getData();
+            Entry<K,V> result = next.getData();
+            return result;
         }
 
     }
