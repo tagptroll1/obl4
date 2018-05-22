@@ -61,5 +61,16 @@ public class BinaryNode<K,V>{
     public boolean isLeaf(){
         return (left == null) && (right == null);
     }
+    public boolean isFull(){
+        return (left != null) && (right != null);
+    }
+
+    public BinaryNode leftmost(){
+        if (hasLeft()){
+            return left.leftmost();
+        } else {
+            return this; //har kanskje en left child?
+        }
+    }
 
 }

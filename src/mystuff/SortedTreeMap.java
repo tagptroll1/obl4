@@ -62,7 +62,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
         }
 
         V res = addElem(entry, rootNode);
-        // FIXME: 22.05.2018 ADD migt not actually get a null?
+
         if (res == null) numberOfEntries++;
         return res;
     }
@@ -116,8 +116,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
 
         Entry<K, V> entry = b.getData();
 
-        // TODO: 22.05.2018  add f.apply thingy
-        add(entry.key, f.apply(entry.key,entry.value));// FIXME: 22.05.2018
+        add(entry.key, f.apply(entry.key,entry.value));
     }
 
 
@@ -125,28 +124,43 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
     public V remove(Object key) throws NoSuchElementException {
         BinaryNode nodeToRemove = getNodeByKey(rootNode,(K)key);
 
+        //sjekker at ingen verdier er ute på tur...(null)
         if (rootNode == null || key == null || nodeToRemove == null){
             throw new NoSuchElementException("element could not be removed\n"+
             "root= "+rootNode+"\n"+ "key= "+key+"\n"+ "node= "+nodeToRemove+"\n");
         }
 
+        //returnvalue
+        V result = (V)nodeToRemove.getData().value;
+
+        // FIXME: ------#############-------------
+
         //if node does not have children, just kill it.
         if (nodeToRemove.isLeaf()){
             nodeToRemove = null;
+            numberOfEntries--;
+            return result;
         }
 
-        // just one child
-        if (nodeToRemove.hasLeft() && !nodeToRemove.hasRight()){
-            nodeToRemove = nodeToRemove.getLeft();
-        } else if (nodeToRemove.hasRight() && !nodeToRemove.hasLeft()){
+        // 2 children
+        if (nodeToRemove.isFull()){
+            BinaryNode dead = nodeToRemove;
+            nodeToRemove = nodeToRemove.leftmost();
+        }
+
+        // one child
+        if (nodeToRemove.hasRight()){
             nodeToRemove = nodeToRemove.getRight();
+        } else {
+            nodeToRemove = nodeToRemove.getLeft();
         }
-
-        //todo "node To Be Removed" has two children
 
         numberOfEntries--;
-        return (V)nodeToRemove.getData().value;
+        return result;
+
     }
+
+
 
 
     @Override
@@ -164,7 +178,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
         if (node == null) return null;
 
         int comparison = comparator.compare(key, (K)node.getData().key);
-        BinaryNode result = null;
+        BinaryNode result;
 
         if (comparison == 0){
             result = node;
@@ -177,26 +191,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
         return result;
     }
 
-    /**
-     * @return first node that matches the value
-     */
-    private BinaryNode getNodeByValue(V val, BinaryNode currNode){
-        if (isEmpty() || val == null) return null; // om tree er tom eller om val er null
 
-        V curVal = (V)currNode.getData().value;
-
-        if (curVal == val){
-            return currNode;
-        } else {
-            if (currNode.hasLeft()){
-                currNode = getNodeByValue(val, currNode.getLeft());
-            }
-            if (currNode.hasRight()){
-                currNode = getNodeByValue(val, currNode.getRight());
-            }
-        }
-        return null;
-    }
     
     @Override
     public boolean containsKey(K key) {
@@ -206,7 +201,6 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
     @Override
     public boolean containsValue(V value) {
         Iterator itr = getIter();
-
         while (itr.hasNext()){
             Entry<K,V> e = (Entry<K, V>) itr.next();
             if (e.value.equals(value)){
@@ -236,46 +230,36 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
     
     @Override
     public Entry<K, V> higherOrEqualEntry(K key) {
-//        Iterator itr = getIter();
-//        Entry<K,V> cur = null;
-//        while (itr.hasNext()){
-//            cur = (Entry<K, V>) itr.next();
-//                // FIXME: Comparator comparison order of param?
-//            int comp = comparator.compare(key, cur.key);
-//            if (comp >= 0) break;
-//        }
-//        return cur;
-        if (key == null || isEmpty()) return null;
-        return findHigh(rootNode, key).getData();
+        Iterator itr = getIter();
+        Entry<K,V> cur = null;
+
+        while (itr.hasNext()){
+            cur = (Entry<K, V>) itr.next();
+            int comp = comparator.compare(cur.key, key);
+            if (comp >= 0) return cur;
+        }
+        return null;
     }
-    private BinaryNode findHigh(BinaryNode node, K key){
-        if (node == null) return null;
-        BinaryNode res = null;
 
-        int comparison = comparator.compare(key, (K)node.getData().key);
-
-        if (comparison == 0) return node;
-
-        // FIXME: 22.05.2018  [ hmmmm not working ]
-
-        return null; //.....
-    }
 
     
     @Override
     public Entry<K, V> lowerOrEqualEntry(K key) {
-//        Entry<K, V> cur,prev;
-//        cur = null;
-//        prev = null;
-//        Iterator itr = getIter();
-//        while (itr.hasNext()){
-//            prev = cur;
-//            cur = (Entry<K, V>) itr.next();
-//        }
-//
-//        return cur;
+        Iterator itr = getIter();
+        Entry<K,V> cur,prev = null;
 
-        return null;
+
+        while (itr.hasNext()){
+            cur = (Entry<K, V>) itr.next();
+            int comp = comparator.compare(cur.key, key);
+            if (comp == 0){
+                return cur;
+            } else if (comp > 0){
+                return prev;
+            }
+            prev = cur;
+        }
+        return prev;
     }
     
     @Override
@@ -285,7 +269,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
     
     @Override
     public void removeIf(BiPredicate<K, V> p) {
-        //numberOfEntries--
+        // TODO: 22.05.2018 IMPLEMENT
     }
     
     @Override
