@@ -110,7 +110,10 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
     
     @Override
     public void replace(K key, BiFunction<K, V, V> f) throws NoSuchElementException {
-
+        Entry<K, V> entry = getNodeByKey(rootNode, key).getData();
+        if (entry == null) throw new NoSuchElementException("replace() fail, entry not found");
+        // TODO: 22.05.2018  add f.apply thingy
+        add(entry.key, f.apply(entry.key,entry.value));// FIXME: 22.05.2018
     }
 
 
