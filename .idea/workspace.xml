@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e58d70ad-f82d-4f4e-80f3-8d079b0db7f2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/mystuff/BinaryNode.java" afterPath="$PROJECT_DIR$/src/mystuff/BinaryNode.java" />
       <change beforePath="$PROJECT_DIR$/src/mystuff/Main.java" afterPath="$PROJECT_DIR$/src/mystuff/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/mystuff/SortedTreeMap.java" afterPath="$PROJECT_DIR$/src/mystuff/SortedTreeMap.java" />
     </list>
@@ -20,28 +19,28 @@
       <file leaf-file-name="SortedTreeMap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mystuff/SortedTreeMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="233" column="19" lean-forward="true" selection-start-line="233" selection-start-column="19" selection-end-line="233" selection-end-column="19" />
+            <state relative-caret-position="260">
+              <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1023#1024#0" expanded="true" />
                 <element signature="e#1074#1075#0" expanded="true" />
-                <element signature="e#5074#5075#0" expanded="true" />
-                <element signature="e#5148#5149#0" expanded="true" />
-                <element signature="e#5211#5212#0" expanded="true" />
-                <element signature="e#5273#5274#0" expanded="true" />
-                <element signature="e#5694#5695#0" expanded="true" />
-                <element signature="e#5730#5731#0" expanded="true" />
-                <element signature="e#6555#6556#0" expanded="true" />
-                <element signature="e#6605#6606#0" expanded="true" />
-                <element signature="e#6756#6757#0" expanded="true" />
-                <element signature="e#6795#6796#0" expanded="true" />
-                <element signature="e#6838#6839#0" expanded="true" />
-                <element signature="e#6876#6877#0" expanded="true" />
-                <element signature="e#7015#7016#0" expanded="true" />
-                <element signature="e#7056#7057#0" expanded="true" />
-                <element signature="e#7352#7353#0" expanded="true" />
-                <element signature="e#7421#7422#0" expanded="true" />
+                <element signature="e#5106#5107#0" expanded="true" />
+                <element signature="e#5180#5181#0" expanded="true" />
+                <element signature="e#5243#5244#0" expanded="true" />
+                <element signature="e#5305#5306#0" expanded="true" />
+                <element signature="e#5726#5727#0" expanded="true" />
+                <element signature="e#5762#5763#0" expanded="true" />
+                <element signature="e#7039#7040#0" expanded="true" />
+                <element signature="e#7089#7090#0" expanded="true" />
+                <element signature="e#7240#7241#0" expanded="true" />
+                <element signature="e#7279#7280#0" expanded="true" />
+                <element signature="e#7322#7323#0" expanded="true" />
+                <element signature="e#7360#7361#0" expanded="true" />
+                <element signature="e#7499#7500#0" expanded="true" />
+                <element signature="e#7540#7541#0" expanded="true" />
+                <element signature="e#7836#7837#0" expanded="true" />
+                <element signature="e#7905#7906#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,8 +49,8 @@
       <file leaf-file-name="SortedTreeMapTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oblig_filer/SortedTreeMapTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="584" column="20" lean-forward="false" selection-start-line="584" selection-start-column="20" selection-end-line="584" selection-end-column="20" />
+            <state relative-caret-position="163">
+              <caret line="370" column="20" lean-forward="false" selection-start-line="370" selection-start-column="20" selection-end-line="370" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -241,7 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SortedTreeMapTest.higher_or_eq_entry">
+  <component name="RunManager" selected="JUnit.SortedTreeMapTest.add_updates_size">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -307,6 +306,31 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="SortedTreeMapTest.add_updates_size" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="oblig_filer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="OBLIG_4_HME005" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="oblig_filer" />
+      <option name="MAIN_CLASS_NAME" value="oblig_filer.SortedTreeMapTest" />
+      <option name="METHOD_NAME" value="add_updates_size" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="SortedTreeMapTest.higher_or_eq_entry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -320,31 +344,6 @@
       <option name="PACKAGE_NAME" value="oblig_filer" />
       <option name="MAIN_CLASS_NAME" value="oblig_filer.SortedTreeMapTest" />
       <option name="METHOD_NAME" value="higher_or_eq_entry" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="SortedTreeMapTest.merge_other" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="oblig_filer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="OBLIG_4_HME005" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="oblig_filer" />
-      <option name="MAIN_CLASS_NAME" value="oblig_filer.SortedTreeMapTest" />
-      <option name="METHOD_NAME" value="merge_other" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -444,18 +443,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.merge_other" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.replace_with_f_missing_key" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.higher_or_eq_entry" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.replace_with_f_missing_key" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.higher_or_eq_entry" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.add_updates_size" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.higher_or_eq_entry" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.add_updates_size" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest" />
         <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.replace_with_f_missing_key" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.merge_other" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.higher_or_eq_entry" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SortedTreeMapTest.replace_with_f_missing_key" />
       </list>
     </recent_temporary>
   </component>
@@ -474,7 +473,7 @@
       <updated>1525421799198</updated>
       <workItem from="1525421805786" duration="4783000" />
       <workItem from="1525776215434" duration="13751000" />
-      <workItem from="1526486871515" duration="49566000" />
+      <workItem from="1526486871515" duration="52855000" />
     </task>
     <task id="LOCAL-00001" summary="I fiks typhoons">
       <created>1525427309656</created>
@@ -539,43 +538,50 @@
       <option name="project" value="LOCAL" />
       <updated>1526932184328</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="13 failed">
+      <created>1526975662102</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1526975662102</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SortedTreeMapTest - 2018.05.22 at 09h 05m 36s.xml">
+    <history-entry file="SortedTreeMapTest - 2018.05.22 at 10h 20m 15s.xml">
       <configuration name="SortedTreeMapTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortedTreeMapTest - 2018.05.22 at 09h 46m 45s.xml">
+    <history-entry file="SortedTreeMapTest - 2018.05.22 at 10h 32m 47s.xml">
       <configuration name="SortedTreeMapTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortedTreeMapTest - 2018.05.22 at 09h 47m 40s.xml">
+    <history-entry file="SortedTreeMapTest - 2018.05.22 at 10h 35m 09s.xml">
       <configuration name="SortedTreeMapTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortedTreeMapTest_higher_or_eq_entry - 2018.05.22 at 08h 51m 50s.xml">
-      <configuration name="SortedTreeMapTest.higher_or_eq_entry" configurationId="JUnit" />
+    <history-entry file="SortedTreeMapTest - 2018.05.22 at 10h 35m 31s.xml">
+      <configuration name="SortedTreeMapTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortedTreeMapTest_higher_or_eq_entry - 2018.05.22 at 08h 53m 15s.xml">
-      <configuration name="SortedTreeMapTest.higher_or_eq_entry" configurationId="JUnit" />
+    <history-entry file="SortedTreeMapTest - 2018.05.22 at 10h 35m 51s.xml">
+      <configuration name="SortedTreeMapTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortedTreeMapTest_higher_or_eq_entry - 2018.05.22 at 08h 53m 25s.xml">
-      <configuration name="SortedTreeMapTest.higher_or_eq_entry" configurationId="JUnit" />
+    <history-entry file="SortedTreeMapTest - 2018.05.22 at 10h 36m 06s.xml">
+      <configuration name="SortedTreeMapTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortedTreeMapTest_higher_or_eq_entry - 2018.05.22 at 08h 56m 25s.xml">
-      <configuration name="SortedTreeMapTest.higher_or_eq_entry" configurationId="JUnit" />
+    <history-entry file="SortedTreeMapTest - 2018.05.22 at 10h 41m 00s.xml">
+      <configuration name="SortedTreeMapTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortedTreeMapTest_higher_or_eq_entry - 2018.05.22 at 09h 51m 36s.xml">
-      <configuration name="SortedTreeMapTest.higher_or_eq_entry" configurationId="JUnit" />
+    <history-entry file="SortedTreeMapTest_add_updates_size - 2018.05.22 at 10h 47m 52s.xml">
+      <configuration name="SortedTreeMapTest.add_updates_size" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortedTreeMapTest_higher_or_eq_entry - 2018.05.22 at 09h 52m 51s.xml">
-      <configuration name="SortedTreeMapTest.higher_or_eq_entry" configurationId="JUnit" />
+    <history-entry file="SortedTreeMapTest_add_updates_size - 2018.05.22 at 10h 48m 04s.xml">
+      <configuration name="SortedTreeMapTest.add_updates_size" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortedTreeMapTest_higher_or_eq_entry - 2018.05.22 at 09h 53m 39s.xml">
+    <history-entry file="SortedTreeMapTest_higher_or_eq_entry - 2018.05.22 at 10h 17m 58s.xml">
       <configuration name="SortedTreeMapTest.higher_or_eq_entry" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68100000" />
+    <option name="totallyTimeSpent" value="71389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="787" y="0" width="1140" height="1057" extended-state="0" />
@@ -625,7 +631,8 @@
     <MESSAGE value="working on implementing an iterator" />
     <MESSAGE value="itr implemented" />
     <MESSAGE value="itr working as intended" />
-    <option name="LAST_COMMIT_MESSAGE" value="itr working as intended" />
+    <MESSAGE value="13 failed" />
+    <option name="LAST_COMMIT_MESSAGE" value="13 failed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -640,22 +647,22 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1023#1024#0" expanded="true" />
             <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#5074#5075#0" expanded="true" />
-            <element signature="e#5148#5149#0" expanded="true" />
-            <element signature="e#5211#5212#0" expanded="true" />
-            <element signature="e#5273#5274#0" expanded="true" />
-            <element signature="e#5694#5695#0" expanded="true" />
-            <element signature="e#5730#5731#0" expanded="true" />
-            <element signature="e#6555#6556#0" expanded="true" />
-            <element signature="e#6605#6606#0" expanded="true" />
-            <element signature="e#6756#6757#0" expanded="true" />
-            <element signature="e#6795#6796#0" expanded="true" />
-            <element signature="e#6838#6839#0" expanded="true" />
-            <element signature="e#6876#6877#0" expanded="true" />
-            <element signature="e#7015#7016#0" expanded="true" />
-            <element signature="e#7056#7057#0" expanded="true" />
-            <element signature="e#7352#7353#0" expanded="true" />
-            <element signature="e#7421#7422#0" expanded="true" />
+            <element signature="e#5106#5107#0" expanded="true" />
+            <element signature="e#5180#5181#0" expanded="true" />
+            <element signature="e#5243#5244#0" expanded="true" />
+            <element signature="e#5305#5306#0" expanded="true" />
+            <element signature="e#5726#5727#0" expanded="true" />
+            <element signature="e#5762#5763#0" expanded="true" />
+            <element signature="e#7039#7040#0" expanded="true" />
+            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="e#7240#7241#0" expanded="true" />
+            <element signature="e#7279#7280#0" expanded="true" />
+            <element signature="e#7322#7323#0" expanded="true" />
+            <element signature="e#7360#7361#0" expanded="true" />
+            <element signature="e#7499#7500#0" expanded="true" />
+            <element signature="e#7540#7541#0" expanded="true" />
+            <element signature="e#7836#7837#0" expanded="true" />
+            <element signature="e#7905#7906#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -751,22 +758,22 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1023#1024#0" expanded="true" />
             <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#5074#5075#0" expanded="true" />
-            <element signature="e#5148#5149#0" expanded="true" />
-            <element signature="e#5211#5212#0" expanded="true" />
-            <element signature="e#5273#5274#0" expanded="true" />
-            <element signature="e#5694#5695#0" expanded="true" />
-            <element signature="e#5730#5731#0" expanded="true" />
-            <element signature="e#6555#6556#0" expanded="true" />
-            <element signature="e#6605#6606#0" expanded="true" />
-            <element signature="e#6756#6757#0" expanded="true" />
-            <element signature="e#6795#6796#0" expanded="true" />
-            <element signature="e#6838#6839#0" expanded="true" />
-            <element signature="e#6876#6877#0" expanded="true" />
-            <element signature="e#7015#7016#0" expanded="true" />
-            <element signature="e#7056#7057#0" expanded="true" />
-            <element signature="e#7352#7353#0" expanded="true" />
-            <element signature="e#7421#7422#0" expanded="true" />
+            <element signature="e#5106#5107#0" expanded="true" />
+            <element signature="e#5180#5181#0" expanded="true" />
+            <element signature="e#5243#5244#0" expanded="true" />
+            <element signature="e#5305#5306#0" expanded="true" />
+            <element signature="e#5726#5727#0" expanded="true" />
+            <element signature="e#5762#5763#0" expanded="true" />
+            <element signature="e#7039#7040#0" expanded="true" />
+            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="e#7240#7241#0" expanded="true" />
+            <element signature="e#7279#7280#0" expanded="true" />
+            <element signature="e#7322#7323#0" expanded="true" />
+            <element signature="e#7360#7361#0" expanded="true" />
+            <element signature="e#7499#7500#0" expanded="true" />
+            <element signature="e#7540#7541#0" expanded="true" />
+            <element signature="e#7836#7837#0" expanded="true" />
+            <element signature="e#7905#7906#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -812,6 +819,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/functionaljava/functionaljava-quickcheck/4.7/functionaljava-quickcheck-4.7.jar!/fj/test/CheckResult.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/functionaljava/functionaljava/4.7/functionaljava-4.7.jar!/fj/Show.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding>
+            <element signature="e#3524#3525#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/oblig_filer/SortedTreeMapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="370" column="20" lean-forward="false" selection-start-line="370" selection-start-column="20" selection-end-line="370" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/oblig_filer/ISortedTreeMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1348">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mystuff/BinaryNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -849,68 +894,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/oblig_filer/ISortedTreeMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1348">
-          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/functionaljava/functionaljava-quickcheck/4.7/functionaljava-quickcheck-4.7.jar!/fj/test/CheckResult.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/functionaljava/functionaljava/4.7/functionaljava-4.7.jar!/fj/Show.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding>
-            <element signature="e#3524#3525#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/oblig_filer/SortedTreeMapTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="584" column="20" lean-forward="false" selection-start-line="584" selection-start-column="20" selection-end-line="584" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mystuff/SortedTreeMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="233" column="19" lean-forward="true" selection-start-line="233" selection-start-column="19" selection-end-line="233" selection-end-column="19" />
+        <state relative-caret-position="260">
+          <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1023#1024#0" expanded="true" />
             <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#5074#5075#0" expanded="true" />
-            <element signature="e#5148#5149#0" expanded="true" />
-            <element signature="e#5211#5212#0" expanded="true" />
-            <element signature="e#5273#5274#0" expanded="true" />
-            <element signature="e#5694#5695#0" expanded="true" />
-            <element signature="e#5730#5731#0" expanded="true" />
-            <element signature="e#6555#6556#0" expanded="true" />
-            <element signature="e#6605#6606#0" expanded="true" />
-            <element signature="e#6756#6757#0" expanded="true" />
-            <element signature="e#6795#6796#0" expanded="true" />
-            <element signature="e#6838#6839#0" expanded="true" />
-            <element signature="e#6876#6877#0" expanded="true" />
-            <element signature="e#7015#7016#0" expanded="true" />
-            <element signature="e#7056#7057#0" expanded="true" />
-            <element signature="e#7352#7353#0" expanded="true" />
-            <element signature="e#7421#7422#0" expanded="true" />
+            <element signature="e#5106#5107#0" expanded="true" />
+            <element signature="e#5180#5181#0" expanded="true" />
+            <element signature="e#5243#5244#0" expanded="true" />
+            <element signature="e#5305#5306#0" expanded="true" />
+            <element signature="e#5726#5727#0" expanded="true" />
+            <element signature="e#5762#5763#0" expanded="true" />
+            <element signature="e#7039#7040#0" expanded="true" />
+            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="e#7240#7241#0" expanded="true" />
+            <element signature="e#7279#7280#0" expanded="true" />
+            <element signature="e#7322#7323#0" expanded="true" />
+            <element signature="e#7360#7361#0" expanded="true" />
+            <element signature="e#7499#7500#0" expanded="true" />
+            <element signature="e#7540#7541#0" expanded="true" />
+            <element signature="e#7836#7837#0" expanded="true" />
+            <element signature="e#7905#7906#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -16,6 +16,8 @@ public class Main {
         tree.add(-1,"");            //8
         tree.add(null,"waaaaaaa");  //9
         tree.add(100,null);         //10
+
+        tree.add(15,"asd"); //still 8!
         System.out.println("size: "+tree.size()+"\n");
 
         tree.entries().forEach(e -> System.out.println(e.key + "  "+e.value));
