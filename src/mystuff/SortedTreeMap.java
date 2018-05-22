@@ -58,7 +58,7 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
         if (isEmpty()){
             rootNode = new BinaryNode<>(entry);
             numberOfEntries++;
-            return entry.value;
+            return null;
         }
 
         V res = addElem(entry, rootNode);
