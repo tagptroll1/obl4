@@ -130,36 +130,52 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
             "root= "+rootNode+"\n"+ "key= "+key+"\n"+ "node= "+nodeToRemove+"\n");
         }
 
-        //returnvalue
-        V result = (V)nodeToRemove.getData().value;
 
-        // FIXME: ------#############-------------
-
-        //if node does not have children, just kill it.
-        if (nodeToRemove.isLeaf()){
-            nodeToRemove = null;
-            numberOfEntries--;
-            return result;
-        }
-
-        // 2 children
-        if (nodeToRemove.isFull()){
-            BinaryNode dead = nodeToRemove;
-            nodeToRemove = nodeToRemove.leftmost();
-        }
-
-        // one child
-        if (nodeToRemove.hasRight()){
-            nodeToRemove = nodeToRemove.getRight();
-        } else {
-            nodeToRemove = nodeToRemove.getLeft();
-        }
+        BinaryNode<K,V> res = removeEntry(nodeToRemove);
 
         numberOfEntries--;
-        return result;
-
+        return (V)res.getData().value;
     }
 
+    /**
+     * @param node to remove
+     * @return removed node
+     */
+    private BinaryNode<K,V> removeEntry(BinaryNode node){
+        //store copy of original
+        BinaryNode<K,V> returnVal = new BinaryNode<>(
+                new Entry<>((K)node.getData().key,(V)node.getData().value)
+        );
+
+
+        if (node.hasRight() && node.hasLeft()){
+            //go left sub
+            BinaryNode minNode = node.getRight();
+            BinaryNode minParent = null;
+
+            //find min
+            while (minNode.hasLeft()){
+                minParent = minNode;
+                minNode = minNode.getLeft();
+            }
+            // minNode is now min in right Sub
+
+            //???
+
+            return returnVal;
+        }
+
+
+        if (node.hasLeft()) {
+            node = node.getLeft();
+        } else if (node.hasRight()) {
+            node = node.getRight();
+        } else {
+            node = null;
+        }
+
+        return returnVal;
+    }
 
 
 
@@ -174,7 +190,12 @@ public class SortedTreeMap<K extends Comparable<? super K>, V> implements ISorte
         return (V)result.getData().value;
     }
 
-    private BinaryNode getNodeByKey(BinaryNode node, K key){
+
+    public BinaryNode getRootNode() {
+        return rootNode;
+    }
+
+    public BinaryNode getNodeByKey(BinaryNode node, K key){
         if (node == null) return null;
 
         int comparison = comparator.compare(key, (K)node.getData().key);
